@@ -4,5 +4,5 @@ practical 1
 3) program for 100000 random and unique number in file handling                 = randuniq.java
 
 practical 2
-1) linear search in file data                                                   = ____________
+1) linear search in file data                                                   = LinearSFile.java
 2) 
