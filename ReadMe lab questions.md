@@ -5,4 +5,5 @@ practical 1
 
 practical 2
 1) linear search in file data                                                   = LinearSFile.java
-2) 
+2) time complexity of linear search (int start_time= System.currentTime() = end =total end - start; = ________.java
+3) Binary search in file numbers data        (use arraylist<Integer> tag        =________.java
