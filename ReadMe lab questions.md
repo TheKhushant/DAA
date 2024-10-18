@@ -9,3 +9,7 @@ practical 2
 3) Binary search in file numbers data        (use arraylist<Integer> tag        =binarySearch.java
 
 4) insertion sort (in file handling , also print time complaxcity of it)       = ______.java
+
+
+self Code (NOT BY MAAM) :
+Quick Sort in one Lakh elment
