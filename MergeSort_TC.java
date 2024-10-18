@@ -11,7 +11,7 @@ public class MergeSort {
         String inputFileName = "uniquenum1.txt"; // Input file
         String outputFileName = "Merge_sort_output.txt"; // Output file
         List<Integer> numbers = new ArrayList<>(); // List to store numbers
-
+        long startTime = System.currentTimeMillis();
         try {
             // Read the file
             BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
@@ -46,6 +46,9 @@ public class MergeSort {
             System.out.println("Error parsing number from file.");
             e.printStackTrace();
         }
+        long stopTime = System.currentTimeMillis();
+        long totalTime =  stopTime - startTime;
+        System.out.println("Start Time : "+ startTime +"\nstop Time : " + stopTime + "\ntotal time : " + totalTime);
     }
 
     // Merge Sort implementation
