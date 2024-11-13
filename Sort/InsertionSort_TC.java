@@ -9,15 +9,15 @@ import java.util.List;
 public class InsertionSortTC {
 
     public static void main(String[] args) {
-        String inputFileName = "uniquenum1.txt"; // Input file
-        String outputFileName = "Insertion_sort_output.txt"; // Output file
-        List<Integer> numbers = new ArrayList<>(); // List to store numbers
+        String inputFileName = "uniquenum1.txt"; 
+        String outputFileName = "Insertion_sort_output.txt"; 
+        List<Integer> numbers = new ArrayList<>(); 
         long startTime = System.currentTimeMillis();
         
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
             String line;
 
-            // Reading each line from the file and parsing the numbers
+            
             while ((line = reader.readLine()) != null) {
                 for (String numStr : line.split("\\s+")) {
                     if (!numStr.isEmpty()) {
@@ -26,10 +26,10 @@ public class InsertionSortTC {
                 }
             }
 
-            // Sorting the numbers using Insertion Sort
+            
             insertionSort(numbers);
 
-            // Writing the sorted numbers to the output file
+            
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
                 for (int num : numbers) {
                     writer.write(num + " ");
@@ -51,13 +51,12 @@ public class InsertionSortTC {
         System.out.println("Start Time : " + startTime + "\nStop Time : " + stopTime + "\nTotal Time (ms): " + totalTime);
     }
 
-    // Insertion Sort implementation
+    
     private static void insertionSort(List<Integer> arr) {
         for (int i = 1; i < arr.size(); i++) {
             int key = arr.get(i);
             int j = i - 1;
 
-            // Shift elements greater than key to the right
             while (j >= 0 && arr.get(j) > key) {
                 arr.set(j + 1, arr.get(j));
                 j--;
