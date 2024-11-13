@@ -1,3 +1,38 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+import java.util.HashSet;
+
+public class sortedno {
+    public static void main(String[] args) {
+        HashSet<Integer> huniq = new HashSet<>();
+
+        Scanner sc = new Scanner(System.in);
+        int n, count = 0, un;
+        System.out.print("Enter the number of unique random numbers to generate: ");
+        n = sc.nextInt();
+        sc.close();
+
+        String fileName = "uniquenum1.txt";
+        
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+            while (count < n) {  // Loop until we get 'n' unique numbers
+                un = (int) Math.floor(Math.random() * 100000) + 1;
+                if (!huniq.contains(un)) {
+                    huniq.add(un);                     // Add random number to HashSet
+                    writer.println(un);                // Write unique number to file
+                    count++;                           // Increase count of unique numbers
+                }
+            }
+            System.out.println("Unique numbers written to " + fileName);
+        } catch (IOException e) {
+            System.err.println("An IOException occurred: " + e.getMessage());
+        }
+    }
+}
+
+//previous program of self made
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
